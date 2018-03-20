@@ -5,39 +5,9 @@
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="./js/scripts.js"></script>
     <title>Alfabeto Griego</title>
   </head>
-
-  <script type="text/javascript">
-
-    function mostrarNombre(id){
-      letras=document.getElementsByClassName('letra');
-      letras[id].classList.add('letra-color');
-      nombres=document.getElementsByClassName('letra-nombre');
-      nombres[id].classList.add('activo');
-      nombres[id].classList.remove('inactivo');
-    }
-
-    function eliminarNombre(id){
-      letras=document.getElementsByClassName('letra');
-      letras[id].classList.remove('letra-color');
-      nombres=document.getElementsByClassName('letra-nombre');
-      nombres[id].classList.add('inactivo');
-      nombres[id].classList.remove('activo');
-    }
-
-    function generarNombre(){
-      nombres=document.getElementsByClassName('letra-nombre');
-      nombreFrat = "";
-      for (var i = 0; i < 3; i++) {
-        letterIndex=Math.floor(Math.random() * 24);
-        nombreFrat+= String(nombres[letterIndex].innerHTML) + " ";
-      }
-      document.getElementById('nombreFrat').innerHTML=nombreFrat;
-    }
-  </script>
-
-
 
   <body>
     <header>
