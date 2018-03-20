@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Alfabeto Griego</title>
+  </head>
+
+  <script type="text/javascript">
+
+    function mostrarNombre(id){
+      letras=document.getElementsByClassName('letra');
+      letras[id].classList.add('letra-color');
+      nombres=document.getElementsByClassName('letra-nombre');
+      nombres[id].classList.add('activo');
+      nombres[id].classList.remove('inactivo');
+    }
+
+    function eliminarNombre(id){
+      letras=document.getElementsByClassName('letra');
+      letras[id].classList.remove('letra-color');
+      nombres=document.getElementsByClassName('letra-nombre');
+      nombres[id].classList.add('inactivo');
+      nombres[id].classList.remove('activo');
+    }
+
+    function generarNombre(){
+      nombres=document.getElementsByClassName('letra-nombre');
+      nombreFrat = "";
+      for (var i = 0; i < 3; i++) {
+        letterIndex=Math.floor(Math.random() * 24);
+        nombreFrat+= String(nombres[letterIndex].innerHTML) + " ";
+      }
+      document.getElementById('nombreFrat').innerHTML=nombreFrat;
+    }
+  </script>
+
+
+
+  <body>
+    <header>
+      <h1>Alfabeto Griego</h1>
+      <h2>Pasa el mouse por encima de cada letra para ver su nombre.</h2>
+    </header>
+
+    <hr class="small">
+
+    <div class="container">
+      <div class="row">
+        <div class="letra-container col-lg-2 col-xs-12">
+          <div class="letra" onmouseenter="mostrarNombre(0)" onmouseleave="eliminarNombre(0)">
+            α
+          </div>
+          <p class="letra-nombre inactivo">Alfa</p>
+        </div>
+        <div class="letra-container col-lg-2 col-xs-12">
+          <div class="letra" onmouseenter="mostrarNombre(1)" onmouseleave="eliminarNombre(1)">
+            β
+          </div>
+          <p class="letra-nombre inactivo">Beta</p>
+        </div>
+        <div class="letra-container col-lg-2 col-xs-12">
+          <div class="letra" onmouseenter="mostrarNombre(2)" onmouseleave="eliminarNombre(2)">
+            γ
+          </div>
+          <p class="letra-nombre inactivo">Gamma</p>
+        </div>
+        <div class="letra-container col-lg-2 col-xs-12">
+          <div class="letra" onmouseenter="mostrarNombre(3)" onmouseleave="eliminarNombre(3)">
+            δ
+          </div>
+          <p class="letra-nombre inactivo">Delta</p>
+        </div>
+      </div>
+
+        <div class="row">
+          <div class="letra-container col-lg-2">
+            <div class="letra" onmouseenter="mostrarNombre(4)" onmouseleave="eliminarNombre(4)">
+              ε
+            </div>
+            <p class="letra-nombre inactivo">Epsilon</p>
+          </div>
+          <div class="letra-container col-lg-2">
+            <div class="letra" onmouseenter="mostrarNombre(5)" onmouseleave="eliminarNombre(5)">
+              ζ
+            </div>
+            <p class="letra-nombre inactivo">Dzeta</p>
+          </div>
+          <div class="letra-container col-lg-2">
+            <div class="letra" onmouseenter="mostrarNombre(6)" onmouseleave="eliminarNombre(6)">
+              η
+            </div>
+            <p class="letra-nombre inactivo">Eta</p>
+          </div>
+          <div class="letra-container col-lg-2">
+            <div class="letra" onmouseenter="mostrarNombre(7)" onmouseleave="eliminarNombre(7)">
+              θ
+            </div>
+            <p class="letra-nombre inactivo">Theta</p>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="letra-container col-lg-2">
+            <div class="letra" onmouseenter="mostrarNombre(8)" onmouseleave="eliminarNombre(8)">
+               ι
+            </div>
+            <p class="letra-nombre inactivo">Iota</p>
+          </div>
+          <div class="letra-container col-lg-2">
+            <div class="letra" onmouseenter="mostrarNombre(9)" onmouseleave="eliminarNombre(9)">
+              κ
+            </div>
+            <p class="letra-nombre inactivo">Kappa</p>
+          </div>
+          <div class="letra-container col-lg-2">
+            <div class="letra" onmouseenter="mostrarNombre(10)" onmouseleave="eliminarNombre(10)">
+              λ
+            </div>
+            <p class="letra-nombre inactivo">Lambda</p>
+          </div>
+          <div class="letra-container col-lg-2">
+            <div class="letra" onmouseenter="mostrarNombre(11)" onmouseleave="eliminarNombre(11)">
+              μ
+            </div>
+            <p class="letra-nombre inactivo">Mi</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="letra-container col-lg-2">
+            <div class="letra" onmouseenter="mostrarNombre(12)" onmouseleave="eliminarNombre(12)">
+              ν
+            </div>
+            <p class="letra-nombre inactivo">Ni</p>
+          </div>
+          <div class="letra-container col-lg-2">
+            <div class="letra" onmouseenter="mostrarNombre(13)" onmouseleave="eliminarNombre(13)">
+              ξ
+            </div>
+            <p class="letra-nombre inactivo">Xi</p>
+          </div>
+          <div class="letra-container col-lg-2">
+            <div class="letra" onmouseenter="mostrarNombre(14)" onmouseleave="eliminarNombre(14)">
+              ο
+            </div>
+            <p class="letra-nombre inactivo">Omicron</p>
+          </div>
+          <div class="letra-container col-lg-2">
+            <div class="letra" onmouseenter="mostrarNombre(15)" onmouseleave="eliminarNombre(15)">
+              π
+            </div>
+            <p class="letra-nombre inactivo">Pi</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="letra-container col-lg-2">
+            <div class="letra" onmouseenter="mostrarNombre(16)" onmouseleave="eliminarNombre(16)">
+              ρ
+            </div>
+            <p class="letra-nombre inactivo">Rho</p>
+          </div>
+          <div class="letra-container col-lg-2">
+            <div class="letra" onmouseenter="mostrarNombre(17)" onmouseleave="eliminarNombre(17)">
+              σ
+            </div>
+            <p class="letra-nombre inactivo">Sigma</p>
+          </div>
+          <div class="letra-container col-lg-2">
+            <div class="letra" onmouseenter="mostrarNombre(18)" onmouseleave="eliminarNombre(18)">
+              τ
+            </div>
+            <p class="letra-nombre inactivo">Tau</p>
+          </div>
+          <div class="letra-container col-lg-2">
+            <div class="letra" onmouseenter="mostrarNombre(19)" onmouseleave="eliminarNombre(19)">
+              υ
+            </div>
+            <p class="letra-nombre inactivo">Ipsilon</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="letra-container col-lg-2">
+            <div class="letra" onmouseenter="mostrarNombre(20)" onmouseleave="eliminarNombre(20)">
+              φ
+            </div>
+            <p class="letra-nombre inactivo">Fi</p>
+          </div>
+          <div class="letra-container col-lg-2">
+            <div class="letra" onmouseenter="mostrarNombre(21)" onmouseleave="eliminarNombre(21)">
+              χ
+            </div>
+            <p class="letra-nombre inactivo">Ji</p>
+          </div>
+          <div class="letra-container col-lg-2">
+            <div class="letra" onmouseenter="mostrarNombre(22)" onmouseleave="eliminarNombre(22)">
+              ψ
+            </div>
+            <p class="letra-nombre inactivo">Psi</p>
+          </div>
+          <div class="letra-container col-lg-2">
+            <div class="letra" onmouseenter="mostrarNombre(23)" onmouseleave="eliminarNombre(23)">
+              ω
+            </div>
+            <p class="letra-nombre inactivo">Omega</p>
+          </div>
+        </div>
+    </div>
+
+    <div class="container">
+      <div class="button-wrapper row">
+        <div class="col-lg-12 text-center">
+          <button type="button" name="button" onclick="generarNombre()">Generar nombre</button>
+        </div>
+      </div>
+      <div class="nombreFrat-wrapper row">
+        <div class="col-lg-12 text-center">
+          <p id="nombreFrat" class="text-center"></p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="small">
+    <br><br>
+  </body>
+</html>

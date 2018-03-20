@@ -1,0 +1,45 @@
+body{
+  font-family:'Open Sans';
+}
+
+header{
+  padding:30px;
+  text-align: center;
+}
+
+.letra-container{
+  margin-left:8%;
+  cursor: pointer;
+}
+
+.letra{
+    font-size:3em;
+}
+
+.letra-color{
+    color:lightseagreen;
+}
+
+.letra-nombre{
+  position:absolute;
+}
+
+.activo{
+  display:block;
+}
+
+.inactivo{
+  display: none;
+}
+
+.row{
+  padding:40px;
+}
+
+.small{
+  width:80%;
+}
+
+#nombreFrat{
+  font-size: 2em;
+}
