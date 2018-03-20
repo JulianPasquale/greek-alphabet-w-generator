@@ -7,6 +7,14 @@ header{
   text-align: center;
 }
 
+header>h1{
+  color:#F68657;
+}
+
+header>h2{
+  color:#383A3F;
+}
+
 .letra-container{
   margin-left:8%;
   cursor: pointer;
@@ -17,7 +25,7 @@ header{
 }
 
 .letra-color{
-    color:lightseagreen;
+    color:#F6B352;
 }
 
 .letra-nombre{
